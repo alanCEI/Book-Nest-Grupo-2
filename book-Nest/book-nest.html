@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual</title>
+
+    <style>
+        /* Reset de HTML */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Contenedor Layout General */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Estilos para el header */
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Buscador en el header */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input {
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            width: 250px;
+        }
+
+        .search-container button {
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            margin-left: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #777;
+        }
+
+        /* Botón de inicio de sesión */
+        .login-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para el main (sidebar + content) */
+        .main {
+            display: flex;
+            flex: 1;
+        }
+
+        /* Sidebar (categorías de libros) */
+        .sidebar {
+            background-color: #f0f0f0;
+            width: 250px;
+            padding: 15px;
+        }
+
+        .sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 8px 0;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .sidebar a:hover {
+            color: #007bff;
+        }
+
+        /* Contenido principal */
+        .content {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .content h1 {
+            margin-bottom: 20px;
+        }
+
+        /* Botones de acción */
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .action-btn:hover {
+            background-color: #218838;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        .footer a {
+            color: #7254be;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .search-container input {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .sidebar ul {
+                flex-direction: column;
+            }
+            
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Header con logo, buscador y botón de inicio de sesión -->
+        <div class="header">
+            <div class="logo">Biblioteca Virtual</div>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar libros...">
+                <button>🔍</button>
+            </div>
+            <a href="#" class="login-btn">Iniciar Sesión</a>
+        </div>
+
+        <!-- Main: Sidebar + Contenido -->
+        <div class="main">
+
+            <!-- Sidebar con categorías de libros -->
+            <div class="sidebar">
+                <h2>Categorías de Libros</h2>
+                <br>
+                <ul>
+                    <hr>
+                    <li><a href="#">Novela</a></li>
+                    <hr>
+                    <li><a href="#">Ciencia Ficción</a></li>
+                    <hr>
+                    <li><a href="#">Fantasía</a></li>
+                    <hr>
+                    <li><a href="#">Misterio y Suspenso</a></li>
+                    <hr>
+                    <li><a href="#">Terror</a></li>
+                    <hr>
+                    <li><a href="#">Romance</a></li>
+                    <hr>
+                    <li><a href="#">Historia</a></li>
+                    <hr>
+                    <li><a href="#">Biografías</a></li>
+                    <hr>
+                    <li><a href="#">Poesía</a></li>
+                    <hr>
+                    <li><a href="#">Cómics y Novelas Gráficas</a></li>
+                    <hr>
+                    <li><a href="#">Infantil y Juvenil</a></li>
+                    <hr>
+                </ul>
+            </div>
+
+            <!-- Contenido principal -->
+            <div class="content">
+                <h1>Gestión de Libros</h1>
+                <p>Seleccione una acción:</p>
+                <div class="buttons-container">
+                    <button class="action-btn">Subir Libro</button>
+                    <button class="action-btn">Prestar Libro</button>
+                    <button class="action-btn">Mis Libros</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Biblioteca Virtual &copy; 2025 - Todos los derechos reservados.
+                <a href="#">Términos y Condiciones</a>
+            </p>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
