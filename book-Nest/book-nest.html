@@ -11,6 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
         }
         
         /* Contenedor Layout General */
@@ -22,18 +23,32 @@
 
         /* Estilos para el header */
         .header {
-            background-color: #333;
+            background-color: #6e5c60;
             color: #fff;
             padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-height: 150px;
         }
 
-        .header .logo {
-            font-size: 24px;
-            font-weight: bold;
+        .logo {
+            width: 150px; /* O el tamaño que quieras para el contenedor del logo */
+            height: auto; /* O un valor fijo si deseas limitar la altura */
+
+
         }
+
+        .logo img {
+            display: flex;
+            flex-direction: row;
+            height: 50px; 
+            margin: 1px;
+            margin-left: 40px;
+            
+        }
+
+
 
         /* Buscador en el header */
         .search-container {
@@ -50,11 +65,12 @@
         }
 
         .search-container button {
-            background-color: #555;
+            background-color:#252525;
             color: white;
             border: none;
-            padding: 8px 12px;
+            padding: 7px 10px ;
             margin-left: 5px;
+            border-color:  #f0f0f0;
             border-radius: 5px;
             cursor: pointer;
         }
@@ -65,8 +81,8 @@
 
         /* Botón de inicio de sesión */
         .login-btn {
-            background-color: #007bff;
-            color: white;
+            background-color: #f0f0f0;
+            color: #6e5c60;
             padding: 10px 15px;
             border: none;
             border-radius: 5px;
@@ -75,7 +91,8 @@
         }
 
         .login-btn:hover {
-            background-color: #0056b3;
+            background-color: #333;
+            color: #ffffff;
         }
 
         /* Estilos para el main (sidebar + content) */
@@ -87,8 +104,9 @@
         /* Sidebar (categorías de libros) */
         .sidebar {
             background-color: #f0f0f0;
-            width: 250px;
+            width: 150px;
             padding: 15px;
+            
         }
 
         .sidebar h2 {
@@ -107,19 +125,34 @@
 
         .sidebar a {
             text-decoration: none;
-            color: #333;
+            color:#1e1e1e;
             font-size: 16px;
         }
 
         .sidebar a:hover {
-            color: #007bff;
+            color: #6e5d60;
         }
 
         /* Contenido principal */
         .content {
             flex: 1;
-            padding: 20px;
+            padding: 0px;
             text-align: center;
+        }
+        
+        .banner {
+            background-color: #ffffff;
+            height: 300px;
+            margin: 0px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .banner img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 80%;
         }
 
         .content h1 {
@@ -135,7 +168,7 @@
         }
 
         .action-btn {
-            background-color: #28a745;
+            background-color: #6e5d60;
             color: white;
             padding: 10px 20px;
             border: none;
@@ -145,18 +178,19 @@
         }
 
         .action-btn:hover {
-            background-color: #218838;
+            background-color: #333;
         }
 
         /* Footer */
         .footer {
-            background-color: #333;
+            background-color: #6e5d60;
             color: #fff;
             text-align: center;
             padding: 10px;
+            font-size: 15px;
         }
         .footer a {
-            color: #7254be;
+            color: #f0f0f0;
             text-decoration: none;
             margin-left: 10px;
         }
@@ -187,7 +221,28 @@
                 align-items: center;
             }
         }
+        .icone.lupa {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 50%;
+  position: relative;
+}
 
+.icone.lupa:after {
+  position: relative;
+  width: 5px;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  display: block;
+  content: "";
+  top: -3px;
+  left: -9px;
+  
+  transform: rotate(45deg);
+  transform-origin: -10px 40px;
+  
+}
     </style>
 </head>
 <body>
@@ -196,10 +251,15 @@
 
         <!-- Header con logo, buscador y botón de inicio de sesión -->
         <div class="header">
-            <div class="logo">Biblioteca Virtual</div>
+            <div class="logo"> 
+                
+               
+                <img src="./imagenes logo/nest logo .svg">
+                
+            </div>
             <div class="search-container">
                 <input type="text" placeholder="Buscar libros...">
-                <button>🔍</button>
+                <button><div class="icone lupa"></div></button>
             </div>
             <a href="#" class="login-btn">Iniciar Sesión</a>
         </div>
@@ -240,9 +300,26 @@
 
             <!-- Contenido principal -->
             <div class="content">
-                <h1>Gestión de Libros</h1>
-                <p>Seleccione una acción:</p>
+
+                <div class="banner">
+
+                    
+
+                    <img src="./imagenes logo/otro---realistic-scene-with-books-neighborhood-yard-sale.png" alt="personas intercambiando libros" >
+                    
+
+
+                </div>
+                
+                
+                
+                
+                
+                
+                <h2>Gestión de Libros</h2>
+                
                 <div class="buttons-container">
+                    <p>Seleccione una acción:</p> 
                     <button class="action-btn">Subir Libro</button>
                     <button class="action-btn">Prestar Libro</button>
                     <button class="action-btn">Mis Libros</button>
