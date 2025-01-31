@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +14,7 @@
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
-        
+
         /* Contenedor Layout General */
         .container {
             display: flex;
@@ -33,8 +34,10 @@
         }
 
         .logo {
-            width: 150px; /* O el tamaño que quieras para el contenedor del logo */
-            height: auto; /* O un valor fijo si deseas limitar la altura */
+            width: 150px;
+            /* O el tamaño que quieras para el contenedor del logo */
+            height: auto;
+            /* O un valor fijo si deseas limitar la altura */
 
 
         }
@@ -42,10 +45,10 @@
         .logo img {
             display: flex;
             flex-direction: row;
-            height: 50px; 
+            height: 50px;
             margin: 1px;
             margin-left: 40px;
-            
+
         }
 
 
@@ -65,12 +68,12 @@
         }
 
         .search-container button {
-            background-color:#252525;
+            background-color: #252525;
             color: white;
             border: none;
-            padding: 7px 10px ;
+            padding: 7px 10px;
             margin-left: 5px;
-            border-color:  #f0f0f0;
+            border-color: #f0f0f0;
             border-radius: 5px;
             cursor: pointer;
         }
@@ -106,7 +109,7 @@
             background-color: #f0f0f0;
             width: 150px;
             padding: 15px;
-            
+
         }
 
         .sidebar h2 {
@@ -125,7 +128,7 @@
 
         .sidebar a {
             text-decoration: none;
-            color:#1e1e1e;
+            color: #1e1e1e;
             font-size: 16px;
         }
 
@@ -139,7 +142,7 @@
             padding: 0px;
             text-align: center;
         }
-        
+
         .banner {
             background-color: #ffffff;
             height: 300px;
@@ -148,7 +151,7 @@
             overflow: hidden;
         }
 
-        .banner img{
+        .banner img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -189,6 +192,7 @@
             padding: 10px;
             font-size: 15px;
         }
+
         .footer a {
             color: #f0f0f0;
             text-decoration: none;
@@ -215,51 +219,63 @@
             .sidebar ul {
                 flex-direction: column;
             }
-            
+
             .buttons-container {
                 flex-direction: column;
                 align-items: center;
             }
         }
-        .icone.lupa {
-  width: 20px;
-  height: 20px;
-  border: 2px solid rgb(255, 255, 255);
-  border-radius: 50%;
-  position: relative;
-}
 
-.icone.lupa:after {
-  position: relative;
-  width: 5px;
-  height: 3px;
-  background-color: rgb(255, 255, 255);
-  display: block;
-  content: "";
-  top: -3px;
-  left: -9px;
-  
-  transform: rotate(45deg);
-  transform-origin: -10px 40px;
-  
-}
+        .search-btn {
+            background-color: #aeaeae;
+            color: white;
+            border: none; 
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: relative;
+            margin-right: 8px;
+        }
+
+        .search-icon::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 2px;
+            background-color: white;
+            top: 90%;
+            right: -6px;
+            transform: rotate(45deg);
+        }
     </style>
 </head>
+
 <body>
 
     <div class="container">
 
         <!-- Header con logo, buscador y botón de inicio de sesión -->
         <div class="header">
-            <div class="logo"> 
-                
-               
+            <div class="logo">
+
+
                 <img src="./imagenes logo/nest logo .svg">
-                
+
             </div>
             <div class="search-container">
                 <input type="text" placeholder="Buscar libros...">
-                <button><div class="icone lupa"></div></button>
+                <button class="search-btn">
+                    <div class="search-icon"></div> Buscar
+                </button>
             </div>
             <a href="#" class="login-btn">Iniciar Sesión</a>
         </div>
@@ -303,23 +319,24 @@
 
                 <div class="banner">
 
-                    
 
-                    <img src="./imagenes logo/otro---realistic-scene-with-books-neighborhood-yard-sale.png" alt="personas intercambiando libros" >
-                    
+
+                    <img src="./imagenes logo/otro---realistic-scene-with-books-neighborhood-yard-sale.png"
+                        alt="personas intercambiando libros">
+
 
 
                 </div>
-                
-                
-                
-                
-                
-                
+
+
+
+
+
+
                 <h2>Gestión de Libros</h2>
-                
+
                 <div class="buttons-container">
-                    <p>Seleccione una acción:</p> 
+                    <p>Seleccione una acción:</p>
                     <button class="action-btn">Subir Libro</button>
                     <button class="action-btn">Prestar Libro</button>
                     <button class="action-btn">Mis Libros</button>
@@ -339,4 +356,5 @@
     </div>
 
 </body>
+
 </html>
