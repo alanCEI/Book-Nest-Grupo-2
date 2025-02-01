@@ -32,6 +32,7 @@
             justify-content: space-between;
             align-items: center;
             max-height: 150px;
+            
         }
 
         
@@ -41,6 +42,7 @@
             /* O el tamaño que quieras para el contenedor del logo */
             height: auto;
             /* O un valor fijo si deseas limitar la altura */
+            cursor: pointer;
 
 
         }
@@ -51,6 +53,7 @@
             height: 50px;
             margin: 1px;
             margin-left: 10px;
+        
 
         }
 
@@ -119,12 +122,13 @@
             align-items: center;
             margin: 0px;
             padding: 15px;
-            padding-top: 30px;
+            padding-top: 15px;
             background-color: #6e5d60;
             opacity: 90%;
             width: 300px;
             color:#f0f0f0;
             font-size: 20px;
+
         }
 
         .perfilpic img{
@@ -132,6 +136,17 @@
             border-radius: 100%;
             width: 150px;
             margin-bottom: 15px;
+            margin-top: 15px;
+            
+        }
+
+        .perfildatos ul {
+            list-style: none;
+            font-size: 15px;
+            
+            
+           
+            
         }
 
         .mibiblioteca {
@@ -187,29 +202,6 @@
             text-decoration: underline;
         }
 
-        /* Responsividad */
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-
-            .search-container input {
-                width: 100%;
-                max-width: 100%;
-            }
-
-            .sidebar ul {
-                flex-direction: column;
-            }
-
-            .buttons-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
         .search-btn {
             background-color: #aeaeae;
             color: white;
@@ -250,9 +242,9 @@
         <!-- Header con logo, buscador y botón de inicio de sesión -->
         <div class="header">
 
-            <div class="logo">
+            <div class="logo" >
 
-                <img src="./imagenes logo/nest logo .svg">
+                <a href="./book-nest.html"><img src="./imagenes logo/nest logo .svg" ></a>
 
             </div>
 
@@ -280,13 +272,24 @@
 
                 <div class="sideusuario">
 
+                    <p>¡Bienvenido Daniel!</p>
+
                     <div class="perfilpic">
                         <img src="./imagenes logo/nest-book-logo-blanco-png-.png" alt="foto perfil usuario">
                     </div>
 
+                    <div class="perfildatos">
+                        <ul>
+                            <li>Nombre: Daniel</li>
+                            <li>Apellidos: López Gutiérrez</li>
+                            <li>Ubicación: Madrid</li>
+                            <li>Mail: danlogu@hotmail.com</li>
+                        </ul>
+                    </div>
+
                    
 
-                    <p>Hola Daniel</p>
+                    
 
 
                 </div>
