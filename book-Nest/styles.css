@@ -156,18 +156,23 @@
         .content h1 {
             margin-bottom: 20px;
         }
-        /* html terminos y condiciones css*/
+        
         .content h2 {
             margin-bottom: 20px;
             margin-top: 20px;
         }
-        
+        /* html terminos y condiciones css*/
         .element {
             display: flex;
             justify-content: left;
             margin-top: 35px;
             margin-left: 70px;
             margin-bottom: 15px;
+        }
+        .element h1 {
+            margin-bottom: 20px;
+            margin-top: 20px;
+            
         }
 
         .element2 {
@@ -194,7 +199,7 @@
             margin-left: 100px;
             margin-right: 20px;
             margin-bottom: 20px;
-            
+    
         }
 
         /* Botones de acción */
