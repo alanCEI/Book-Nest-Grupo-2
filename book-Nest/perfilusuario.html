@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual</title>
+
+    <style>
+        /* Reset de HTML */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Contenedor Layout General */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Estilos para el header */
+        .header {
+            background-color: #6e5c60;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            max-height: 150px;
+        }
+
+        
+
+        .logo {
+            width: 150px;
+            /* O el tamaño que quieras para el contenedor del logo */
+            height: auto;
+            /* O un valor fijo si deseas limitar la altura */
+
+
+        }
+
+        .logo img {
+            display: flex;
+            flex-direction: row;
+            height: 50px;
+            margin: 1px;
+            margin-left: 10px;
+
+        }
+
+
+
+        /* Buscador en el header */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input {
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+        }
+
+        .search-container button {
+            background-color: #252525;
+            color: white;
+            border: none;
+            padding: 7px 10px;
+            margin-left: 5px;
+            border-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-container button:hover {
+            background-color: #777;
+        }
+
+        /* Botón de inicio de sesión */
+        .login-btn {
+            background-color: #f0f0f0;
+            color: #6e5c60;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            background-color: #333;
+            color: #ffffff;
+        }
+
+       
+
+        /* Contenido principal */
+        .content {
+            
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            background-color: #dbd6d6;
+            
+        }
+
+        .sideusuario {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0px;
+            padding: 15px;
+            padding-top: 30px;
+            background-color: #6e5d60;
+            opacity: 90%;
+            width: 300px;
+            color:#f0f0f0;
+            font-size: 20px;
+        }
+
+        .perfilpic img{
+            background-color: #f0f0f0;
+            border-radius: 100%;
+            width: 150px;
+            margin-bottom: 15px;
+        }
+
+        .mibiblioteca {
+            display: flex ;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            margin: 5px;
+            background-color: #ffffff;
+            width: 100vw;
+        }
+        
+
+        /* Botones de acción */
+        .buttons-container {
+            display: flex;
+            flex: column;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            background-color: #6e5d60;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .action-btn:hover {
+            background-color: #333;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #6e5d60;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        .footer a {
+            color: #f0f0f0;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+
+            .search-container input {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .sidebar ul {
+                flex-direction: column;
+            }
+
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .search-btn {
+            background-color: #aeaeae;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-icon {
+            width: 20px;
+            height: 20px;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: relative;
+            margin-right: 8px;
+        }
+
+        .search-icon::after {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 2px;
+            background-color: white;
+            top: 90%;
+            right: -6px;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header con logo, buscador y botón de inicio de sesión -->
+        <div class="header">
+
+            <div class="logo">
+
+                <img src="./imagenes logo/nest logo .svg">
+
+            </div>
+
+
+                
+            <div class="search-container">
+                  <input type="text" placeholder="Buscar libros...">
+                  <button class="search-btn">
+                    <div class="search-icon"></div> Buscar
+                  </button>
+             </div>
+
+
+
+
+            <a href="#" class="login-btn">Cerrar sesión</a>
+           
+            
+             </div>
+
+        <!-- Content: Perfil usuario side + Mi biblioteca -->
+        
+
+            <div class="content">
+
+                <div class="sideusuario">
+
+                    <div class="perfilpic">
+                        <img src="./imagenes logo/nest-book-logo-blanco-png-.png" alt="foto perfil usuario">
+                    </div>
+
+                   
+
+                    <p>Hola Daniel</p>
+
+
+                </div>
+
+                <div class="mibiblioteca">
+
+                    <h2>Mi biblioteca</h2>
+
+
+            </div>
+
+
+                
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Biblioteca Virtual &copy; 2025 - Todos los derechos reservados.
+                <a href="#">Términos y Condiciones</a>
+            </p>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>
