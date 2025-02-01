@@ -174,7 +174,6 @@
             margin-top: 20px;
             
         }
-
         .element2 {
             display: flex;
             justify-content: left;
@@ -182,7 +181,6 @@
             margin-left: 70px;
             margin-bottom: 20px;
         }
-
         .element3 {
             display: flex;
             text-align: justify;
@@ -191,7 +189,6 @@
             margin-right: 20px;
             margin-bottom: 20px;
         }
-
         .listas {
             display: flex;
             text-align: justify;
