@@ -63,17 +63,28 @@
         border: none;
         padding: 7px 10px;
         margin-left: 5px;
+        border-color: #f0f0f0;
         border-radius: 5px;
         cursor: pointer;
     }
-    .login-btn {
-        background-color: #f0f0f0;
-        color: #6e5c60;
-        padding: 10px 15px;
-        border: none;
-        border-radius: 5px;
-        text-decoration: none;
-    }
+
+
+.login-btn {
+            background-color: #f0f0f0;
+            color: #6e5c60;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            border-color: #f0f0f0;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            background-color: #333;
+            color: #ffffff;
+        }
+
     
     /* Main Layout */
     .main {
@@ -226,16 +237,11 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-           
-            <div class="logo" >
-
-                <a href="./book-nest.html"><img src="./imagenes logo/nest logo .svg" ></a>
-
-            </div>
-
+            
+            
             <div class="search-container">
                 <input type="text" placeholder="Buscar libro...">
-                <button class="search-btn">🔍</button>
+                <button class="search-btn">Buscar</button>
             </div>
             <a href="#" class="login-btn">Iniciar Sesión</a>
         </div>
@@ -301,7 +307,7 @@
                     </div>
                 </div>
                 <div class="buttons-container">
-                    <p>Seleccione una acción:</p>
+                    <p><strong>Seleccione una acción:</strong></p>
                     <button class="action-btn">📤 Subir Libro</button>
                     <button class="action-btn">🔄 Prestar Libro</button>
                     <button class="action-btn">📚 Mis Libros</button>
