@@ -23,6 +23,7 @@
             align-items: center;
             max-height: 150px;
         }
+
         .logo {
             width: 150px;
             /* O el tamaño que quieras para el contenedor del logo */
@@ -34,8 +35,9 @@
             flex-direction: row;
             height: 50px;
             margin: 1px;
-            margin-left: 40px;
+            margin-left: 0px;
         }
+        
         /* Buscador en el header */
         .search-container {
             display: flex;
@@ -78,29 +80,45 @@
         /* Estilos para el main (sidebar + content) */
         .main {
             display: flex;
+            flex-direction: row;
             flex: 1;
         }
-        /* Sidebar (categorías de libros) */
+
+        .maincontacto{
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Sidebar (géneros literarios) */
         .sidebar {
             background-color: #f0f0f0;
-            width: 150px;
-            padding: 15px;
+            display: flex;
+            flex-direction:column;
+            width: 100px;
+            height: 100vh;
+            padding: 10px;
         }
-        .sidebar h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
+        
+       
         .sidebar ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
         }
         .sidebar ul li {
             margin: 8px 0;
+            
+            
         }
         .sidebar a {
             text-decoration: none;
             color: #1e1e1e;
-            font-size: 16px;
+            font-size: 12px;
+            justify-content: space-between;
+            align-items: center;
         }
         .sidebar a:hover {
             color: #6e5d60;
@@ -130,6 +148,13 @@
         .content h2 {
             margin-bottom: 20px;
             margin-top: 20px;
+        }
+
+        .contentcontacto h1{
+            color:#343434;
+            font-size: 25px;
+
+
         }
         /* CSS terminos y condiciones*/
         .element {
@@ -254,11 +279,10 @@
         /*CSS locacion*/
        .map-container {           
             position: relative;
-            width: 100%;
-            max-width: 725px;
-            margin: 0;
+            width: 100vw;
             height: 100%;
             overflow: hidden;
+            
         }       
         .map-container iframe {
             position: absolute;
@@ -266,17 +290,29 @@
             left: 0;
             width: 100%;
             height: 100%;
-            border: 0;
-        }
-        .contentcontacto {
-            flex: 1;
-            padding: 0px;
-            text-align: left;
+            
 
         }
-        .contacto ul {           
+        .contentcontacto {
+            background-color:#6e5c609d;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 10px;
+            text-align: left;
+            height: 40px;
+            
+
+        }
+        .contacto ul {    
+            background-color: #6e5c609d;      
+            color: #f0f0f0; 
             list-style: none;
-            padding: 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 20px;
+            padding-bottom: 10px;
         }
         .elementocontacto {
             margin-bottom: 20px;

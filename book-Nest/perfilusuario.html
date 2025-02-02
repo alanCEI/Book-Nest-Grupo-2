@@ -121,11 +121,11 @@
             flex-direction: column;
             align-items: center;
             margin: 0px;
-            padding: 15px;
-            padding-top: 15px;
-            background-color: #6e5d60;
+            padding: 5px;
+            padding-top: 55px;
+            background-color: #6e5d607c;
             opacity: 90%;
-            width: 300px;
+            width: 400px;
             color:#f0f0f0;
             font-size: 20px;
 
@@ -133,32 +133,94 @@
 
         .perfilpic img{
             background-color: #f0f0f0;
-            border-radius: 100%;
-            width: 150px;
+            border-radius: 5%;
+            width: 200px;
             margin-bottom: 15px;
-            margin-top: 15px;
+            margin-top: 25px;
+          
             
         }
 
         .perfildatos ul {
             list-style: none;
-            font-size: 15px;
+            font-size: 17px;
+            width: 200px;
+            background-color: none;
+            margin: 12px;
+            color: #333;
             
+    
+        }
+        .perfildatos li {
+
+            display: flex;
+            flex-direction: column;
+            padding: 5px;
+            gap: 5px;
             
            
-            
+          
+    
         }
 
         .mibiblioteca {
             display: flex ;
             flex-direction: column;
             align-items: center;
-            padding: 15px;
-            margin: 5px;
+            padding: 10px;
+            padding-top: 30px;
+            /* margin: 5px; */
             background-color: #ffffff;
             width: 100vw;
         }
+
         
+        .cajalibros {
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: row;      
+            border: solid #6e5c60;
+            gap: 10px;
+            height: 300px;
+            margin: 20px;
+            padding: 10px;;
+            
+            
+            
+        }
+
+        .cajalibro1  {
+            background-color: #e5e5e5ad;
+            width: 200px;
+            
+            border-radius: 10px;
+           
+            
+        }
+
+        .cajalibro2 {
+            background-color:#e5e5e5ad;
+            width: 200px;
+            
+            border-radius: 10px;
+            
+        }
+
+        .cajalibro3  {
+            background-color: #e5e5e5ad;
+            width: 200px;
+           
+            border-radius: 10px;
+            
+
+        }
+
+        .cajalibro4 {
+            background-color: #e5e5e5ad;
+            width: 200px;
+            border-radius: 10px;
+            
+        }
 
         /* Botones de acción */
         .buttons-container {
@@ -272,7 +334,7 @@
 
                 <div class="sideusuario">
 
-                    <p>¡Bienvenido Daniel!</p>
+                    <h2>¡Bienvenido !</h2>
 
                     <div class="perfilpic">
                         <img src="./imagenes logo/nest-book-logo-blanco-png-.png" alt="foto perfil usuario">
@@ -280,23 +342,43 @@
 
                     <div class="perfildatos">
                         <ul>
-                            <li>Nombre: Daniel</li>
-                            <li>Apellidos: López Gutiérrez</li>
-                            <li>Ubicación: Madrid</li>
-                            <li>Mail: danlogu@hotmail.com</li>
+                            <li><strong>Nombre:</strong> Daniel</li>
+                            <li><strong>Apellidos:</strong> López Gutiérrez</li>
+                            <li><strong>Lugar:</strong> Madrid, 28936</li>
+                            <li><strong> Mail:</strong> danlogu@hotmail.com</li>
                         </ul>
                     </div>
-
-                   
-
-                    
 
 
                 </div>
 
-                <div class="mibiblioteca">
+                <div class="mibiblioteca"> <h3>Mi biblioteca</h3>
 
-                    <h2>Mi biblioteca</h2>
+                   
+                 <div class="cajalibros"> 
+
+
+                    <div class="cajalibro1"> Terapia para llevar
+
+
+                    </div>
+
+                    <div class="cajalibro2"> Los Pilares de la Tierra
+
+
+                    </div>
+
+                    <div class="cajalibro3"> Ladrones en París
+
+
+                    </div>
+
+                    <div class="cajalibro4"> Juego de Tronos
+
+
+                    </div>
+
+                </div>       
 
 
             </div>
