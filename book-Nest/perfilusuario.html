@@ -32,10 +32,10 @@
             justify-content: space-between;
             align-items: center;
             max-height: 150px;
-            
+
         }
 
-        
+
 
         .logo {
             width: 150px;
@@ -53,7 +53,7 @@
             height: 50px;
             margin: 1px;
             margin-left: 10px;
-        
+
 
         }
 
@@ -104,16 +104,16 @@
             color: #ffffff;
         }
 
-       
+
 
         /* Contenido principal */
         .content {
-            
+
             display: flex;
             flex-direction: row;
             height: 100vh;
-            background-color: #dbd6d6;
-            
+            background-color: #ffffff;
+
         }
 
         .sideusuario {
@@ -123,22 +123,22 @@
             margin: 0px;
             padding: 5px;
             padding-top: 55px;
-            background-color: #6e5d607c;
+            background-color: #6e5c604d;
             opacity: 90%;
             width: 400px;
-            color:#f0f0f0;
+            color: #f0f0f0;
             font-size: 20px;
 
         }
 
-        .perfilpic img{
+        .perfilpic img {
             background-color: #f0f0f0;
             border-radius: 5%;
             width: 200px;
             margin-bottom: 15px;
             margin-top: 25px;
-          
-            
+
+
         }
 
         .perfildatos ul {
@@ -148,79 +148,93 @@
             background-color: none;
             margin: 12px;
             color: #333;
-            
-    
+
+
         }
+
         .perfildatos li {
 
             display: flex;
             flex-direction: column;
             padding: 5px;
             gap: 5px;
-            
-           
-          
-    
+
+
+
+
         }
 
         .mibiblioteca {
-            display: flex ;
+            display: flex;
             flex-direction: column;
             align-items: center;
             padding: 10px;
             padding-top: 30px;
             /* margin: 5px; */
             background-color: #ffffff;
+
             width: 100vw;
         }
 
-        
+
         .cajalibros {
             background-color: #ffffff;
             display: flex;
-            flex-direction: row;      
-            border: solid #6e5c60;
-            gap: 10px;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+
+            gap: 30px;
             height: 300px;
             margin: 20px;
-            padding: 10px;;
-            
-            
-            
+            padding: 10px;
+
+
+
+
         }
 
-        .cajalibro1  {
+        .caja-acciones {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            color: #f0f0f0;
+            background-color: #ffffff;
+            height: 100px;
+            border-radius: 5px;
+            gap: 10px;
+            margin: 0px;
+
+        }
+
+
+        .card {
             background-color: #e5e5e5ad;
             width: 200px;
-            
+            height: 100px;
             border-radius: 10px;
-           
-            
-        }
+            box-shadow: 2px 2px 5px;
 
-        .cajalibro2 {
-            background-color:#e5e5e5ad;
-            width: 200px;
-            
-            border-radius: 10px;
-            
-        }
 
-        .cajalibro3  {
-            background-color: #e5e5e5ad;
-            width: 200px;
-           
-            border-radius: 10px;
-            
 
         }
 
-        .cajalibro4 {
-            background-color: #e5e5e5ad;
-            width: 200px;
-            border-radius: 10px;
-            
+        .cardaction {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #f0f0f0;
+            background-color: #6e5c60;
+            width: 100px;
+            height: 30px;
+            border-radius: 5px;
+
         }
+
+
 
         /* Botones de acción */
         .buttons-container {
@@ -299,96 +313,148 @@
 
 <body>
 
+
+
     <div class="container">
 
         <!-- Header con logo, buscador y botón de inicio de sesión -->
         <div class="header">
 
-            <div class="logo" >
+            <div class="logo">
 
-                <a href="./book-nest.html"><img src="./imagenes logo/nest logo .svg" ></a>
+                <a href="./book-nest.html"><img src="./imagenes logo/nest logo .svg"></a>
 
             </div>
 
 
-                
+
             <div class="search-container">
-                  <input type="text" placeholder="Buscar libros...">
-                  <button class="search-btn">
+                <input type="text" placeholder="Buscar libros...">
+                <button class="search-btn">
                     <div class="search-icon"></div> Buscar
-                  </button>
-             </div>
+                </button>
+            </div>
 
 
 
 
             <a href="#" class="login-btn">Cerrar sesión</a>
-           
-            
-             </div>
+
+
+        </div>
 
         <!-- Content: Perfil usuario side + Mi biblioteca -->
-        
 
-            <div class="content">
 
-                <div class="sideusuario">
+        <div class="content">
 
-                    <h2>¡Bienvenido !</h2>
+            <div class="sideusuario">
 
-                    <div class="perfilpic">
-                        <img src="./imagenes logo/nest-book-logo-blanco-png-.png" alt="foto perfil usuario">
+                <h2>¡Bienvenido !</h2>
+
+                <div class="perfilpic">
+                    <img src="./imagenes logo/nest-book-logo-blanco-png-.png" alt="foto perfil usuario">
+                </div>
+
+                <div class="perfildatos">
+                    <ul>
+                        <li><strong>Nombre:</strong> Daniel</li>
+                        <li><strong>Apellidos:</strong> López Gutiérrez</li>
+                        <li><strong>Lugar:</strong> Madrid, 28936</li>
+                        <li><strong> Mail:</strong> danlogu@hotmail.com</li>
+                    </ul>
+                </div>
+
+
+            </div>
+
+            <div class="mibiblioteca">
+                <h3>Mi biblioteca</h3>
+
+
+                <div class="cajalibros">
+
+
+                    <div class="card"> Terapia para llevar
+
+
                     </div>
 
-                    <div class="perfildatos">
-                        <ul>
-                            <li><strong>Nombre:</strong> Daniel</li>
-                            <li><strong>Apellidos:</strong> López Gutiérrez</li>
-                            <li><strong>Lugar:</strong> Madrid, 28936</li>
-                            <li><strong> Mail:</strong> danlogu@hotmail.com</li>
-                        </ul>
+                    <div class="card"> Los Pilares de la Tierra
+
+
                     </div>
+
+                    <div class="card"> Ladrones en París
+
+
+                    </div>
+
+                    <div class="card"> Juego de Tronos
+
+
+                    </div>
+
+                    <div class="card"> Terapia para llevar
+
+
+                    </div>
+
+                    <div class="card"> Los Pilares de la Tierra
+
+
+                    </div>
+
+
+
+
 
 
                 </div>
 
-                <div class="mibiblioteca"> <h3>Mi biblioteca</h3>
+                <h3>Seleccione una acción </h3>
 
-                   
-                 <div class="cajalibros"> 
+                <div class="acciones">
 
 
-                    <div class="cajalibro1"> Terapia para llevar
+
+                    <div class="caja-acciones">
+
+
+                        <div class="cardaction"> 
+
+                            <a href="#" class="cardaction">Subir libro</a>
+
+
+                        </div>
+
+                        <div class="cardaction"> 
+
+                            <a href="#" class="cardaction">Alquilar</a>
+
+
+
+
+                        </div>
+
+
+
 
 
                     </div>
 
-                    <div class="cajalibro2"> Los Pilares de la Tierra
 
 
-                    </div>
+                </div>
 
-                    <div class="cajalibro3"> Ladrones en París
-
-
-                    </div>
-
-                    <div class="cajalibro4"> Juego de Tronos
-
-
-                    </div>
-
-                </div>       
 
 
             </div>
 
 
-                
-            </div>
+
 
         </div>
-
         <!-- Footer -->
         <div class="footer">
             <p>Biblioteca Virtual &copy; 2025 - Todos los derechos reservados.
@@ -397,7 +463,6 @@
         </div>
 
 
-    </div>
 
 </body>
 
