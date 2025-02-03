@@ -595,6 +595,16 @@
     background-color: #333;
 }
 
+mainhistorial{
+    background-color: #555;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    
+}
+
 /* Footer */
 .footer {
     background-color: #6e5d60;
@@ -612,3 +622,5 @@
         grid-row: auto;
     }
 }
+
+
