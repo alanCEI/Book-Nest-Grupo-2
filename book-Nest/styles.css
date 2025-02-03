@@ -407,3 +407,227 @@
     padding: 20px;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Contenedor Principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: #6e5c60;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: 150px;
+}
+.logo {
+        width: 150px;
+        /* O el tamaño que quieras para el contenedor del logo */
+        height: auto;
+        /* O un valor fijo si deseas limitar la altura */
+    }
+    .logo img {
+        display: flex;
+        flex-direction: row;
+        height: 50px;
+        margin: 1px;
+        margin-left: 0px;
+    }
+
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+.search-container input {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    width: 150px;
+}
+.search-container button {
+    background-color: #252525;
+    color: white;
+    border: none;
+    padding: 7px 10px;
+    margin-left: 5px;
+    border-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.login-btn {
+        background-color: #f0f0f0;
+        color: #6e5c60;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        border-color: #f0f0f0;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .login-btn:hover {
+        background-color: #333;
+        color: #ffffff;
+    }
+
+
+/* Main Layout */
+.main {
+    display: flex;
+    flex: 1;
+}
+ /* Sidebar (géneros literarios) */
+ .sidebar {
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction:column;
+        width: 100px;
+        height: 100vh;
+        padding: 10px;
+    }
+    
+   
+    .sidebar ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    .sidebar ul li {
+        margin: 8px 0;
+        
+        
+    }
+    .sidebar a {
+        text-decoration: none;
+        color: #1e1e1e;
+        font-size: 12px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sidebar a:hover {
+        color: #6e5d60;
+    }
+
+
+
+/* Contenido Principal */
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Diseño del libro con Grid */
+.book-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+}
+
+/* Imagen del libro */
+.book-image {
+    grid-row: span 3;
+    text-align: center;
+}
+.book-image img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+/* Información del libro */
+.book-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.book-category {
+    font-size: 16px;
+    color: #777;
+    background-color: #eee;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.book-rating {
+    color: #f39c12;
+    font-size: 18px;
+}
+.book-synopsis {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Reseñas y Personas que alquilaron */
+.reviews, .borrowers {
+    grid-column: span 2;
+    margin-top: 10px;
+}
+.borrowers {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Botones de Acción */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+.action-btn {
+    background-color: #6e5d60;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.action-btn:hover {
+    background-color: #333;
+}
+
+/* Footer */
+.footer {
+    background-color: #6e5d60;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .book-container {
+        grid-template-columns: 1fr;
+    }
+    .book-image {
+        grid-row: auto;
+    }
+}

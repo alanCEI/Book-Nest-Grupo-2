@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha del Libro</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    /* Contenedor Principal */
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+    
+    /* Header */
+    .header {
+        background-color: #6e5c60;
+        color: #fff;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-height: 150px;
+    }
+    .logo {
+            width: 150px;
+            /* O el tamaño que quieras para el contenedor del logo */
+            height: auto;
+            /* O un valor fijo si deseas limitar la altura */
+        }
+        .logo img {
+            display: flex;
+            flex-direction: row;
+            height: 50px;
+            margin: 1px;
+            margin-left: 0px;
+        }
+
+
+    
+    .search-container {
+        display: flex;
+        align-items: center;
+    }
+    .search-container input {
+        padding: 8px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        width: 150px;
+    }
+    .search-container button {
+        background-color: #252525;
+        color: white;
+        border: none;
+        padding: 7px 10px;
+        margin-left: 5px;
+        border-color: #f0f0f0;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+
+.login-btn {
+            background-color: #f0f0f0;
+            color: #6e5c60;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            border-color: #f0f0f0;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            background-color: #333;
+            color: #ffffff;
+        }
+
+    
+    /* Main Layout */
+    .main {
+        display: flex;
+        flex: 1;
+    }
+     /* Sidebar (géneros literarios) */
+     .sidebar {
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction:column;
+            width: 100px;
+            height: 100vh;
+            padding: 10px;
+        }
+        
+       
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            
+        }
+        .sidebar ul li {
+            margin: 8px 0;
+            
+            
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #1e1e1e;
+            font-size: 12px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .sidebar a:hover {
+            color: #6e5d60;
+        }
+    
+   
+    
+    /* Contenido Principal */
+    .content {
+        flex: 1;
+        padding: 20px;
+    }
+    
+    /* Diseño del libro con Grid */
+    .book-container {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto auto auto;
+        gap: 20px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: auto;
+    }
+    
+    /* Imagen del libro */
+    .book-image {
+        grid-row: span 3;
+        text-align: center;
+    }
+    .book-image img {
+        width: 100%;
+        max-width: 200px;
+        border-radius: 10px;
+    }
+    
+    /* Información del libro */
+    .book-title {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+    .book-category {
+        font-size: 16px;
+        color: #777;
+        background-color: #eee;
+        padding: 5px;
+        border-radius: 5px;
+        display: inline-block;
+    }
+    .book-rating {
+        color: #f39c12;
+        font-size: 18px;
+    }
+    .book-synopsis {
+        font-size: 14px;
+        color: #555;
+    }
+    
+    /* Reseñas y Personas que alquilaron */
+    .reviews, .borrowers {
+        grid-column: span 2;
+        margin-top: 10px;
+    }
+    .borrowers {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    /* Botones de Acción */
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .action-btn {
+        background-color: #6e5d60;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .action-btn:hover {
+        background-color: #333;
+    }
+    
+    /* Footer */
+    .footer {
+        background-color: #6e5d60;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    /* Responsividad */
+    @media (max-width: 768px) {
+        .book-container {
+            grid-template-columns: 1fr;
+        }
+        .book-image {
+            grid-row: auto;
+        }
+    }
+</style> 
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            
+            
+            <div class="search-container">
+                <input type="text" placeholder="Buscar libro...">
+                <button class="search-btn">Buscar</button>
+            </div>
+            <a href="#" class="login-btn">Iniciar Sesión</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Sidebar con categorías -->
+            <aside class="sidebar">
+                <ul>
+                    <hr>
+                    <li><a href="#">Novela</a></li>
+                    <hr>
+                    <li><a href="#">Ciencia Ficción</a></li>
+                    <hr>
+                    <li><a href="#">Fantasía</a></li>
+                    <hr>
+                    <li><a href="#">Misterio y Suspenso</a></li>
+                    <hr>
+                    <li><a href="#">Terror</a></li>
+                    <hr>
+                    <li><a href="#">Romance</a></li>
+                    <hr>
+                    <li><a href="#">Historia</a></li>
+                    <hr>
+                    <li><a href="#">Biografías</a></li>
+                    <hr>
+                    <li><a href="#">Poesía</a></li>
+                    <hr>
+                    <li><a href="#">Cómics y Novelas Gráficas</a></li>
+                    <hr>
+                    <li><a href="#">Infantil y Juvenil</a></li>
+                    <hr>
+                </ul>
+            </aside>
+
+            <!-- Contenido Principal -->
+            <div class="content">
+                <div class="book-container">
+                    <div class="book-image">
+                        <img src="https://imgs.search.brave.com/_czyyjsfVrZhfs_D6Knilf-WdBZQ_WGZvmDsLxTL2SM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzUxOVpFaXA2VlBM/LmpwZw" alt="Portada del libro">
+                    </div>
+                    <div class="book-info">
+                        <div class="book-title">La niebla</div>
+                        <div class="book-category">Terror</div>
+
+                        <div class="book-rating">⭐ 4.7/5</div>
+                        <div class="book-synopsis">
+                            El maestro en el arte de aterrar se supera a sí mismo. He aquí una serie de historias -unas horripilantes en su extravagancia, otras tan terroríficas que disparan el corazón- que son el producto mejor acabado de una de las más poderosas imaginaciones de nuestro tiempo: En «La niebla», historia inicial del libro, extensa como una novela, un supermercado se convierte en el último bastión de la humanidad ante la invasión de la Tierra por parte de un enemigo inimaginable... En los desvanes hay cosas que conviene dejar tranquilas, cosas como «El mono»... La más soberbia conductora del mundo le ofrece a un hombre «El atajo de la señora Todd», para llegar antes al paraíso... En fin, todo un abanico de emociones y escalofríos, cuyas flores se abren por la noche...
+                        </div>
+                    </div>
+                    <div class="reviews">
+                        <h3>Reseñas de Usuarios</h3>
+                        <p>📝 Manuel Hernández: "No son pocas las novelas que han triunfado y que han sido llevadas a la pantalla en forma de película o de serie. Sin embargo, no son tantas las adaptaciones que han superado a la novela. La Niebla se incluye en ese selecto club. Y eso que la novela es original, está muy bien escrita y te mantiene en vilo hasta el último renglón. Todo un éxito del rey del suspense."</p>
+                        <p>📝 Eva Molina: "Este relato es un clasico del genero de terror, la premisa simple e inquietante va aumentando paulatinamente hasta un terror absoluto, me agrada ver como reaccionan las personas a esta situacion limite y como sacan lo peor o lo mejor de ellos, la adapatación cinematografica es muy buena y su final creo, supera al relato de King. de mis favoritos de este autor."</p>
+                    </div>
+                    <div class="borrowers">
+                        <h3>Personas que han alquilado este libro</h3>
+                        <ul>
+                            <li>📚 Pablo Lopéz</li>
+                            <li>📚 Adrián Rodriguez</li>
+                            <li>📚 Marcos Vallejo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="buttons-container">
+                    <p><strong>Seleccione una acción:</strong></p>
+                    <button class="action-btn">📤 Subir Libro</button>
+                    <button class="action-btn">🔄 Prestar Libro</button>
+                    <button class="action-btn">📚 Mis Libros</button>
+  
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Tu Empresa &copy; 2025 - Todos los derechos reservados. 
+            <a href="#">Términos y Condiciones</a>
+        </div>
+    </div>
+
+</body>
+</html>
