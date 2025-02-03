@@ -603,12 +603,3 @@
     padding: 10px;
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .book-container {
-        grid-template-columns: 1fr;
-    }
-    .book-image {
-        grid-row: auto;
-    }
-}
