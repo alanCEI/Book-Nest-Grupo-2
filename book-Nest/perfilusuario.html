@@ -15,6 +15,7 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+
         /* Contenedor Layout General */
         .container {
             display: flex;
@@ -120,23 +121,26 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+
             margin: 0px;
-            padding: 5px;
+            padding: 25px;
             padding-top: 55px;
             background-color: #6e5c604d;
             opacity: 90%;
             width: 400px;
-            color: #f0f0f0;
+            color: #6e5c60;
             font-size: 20px;
+
 
         }
 
         .perfilpic img {
             background-color: #f0f0f0;
             border-radius: 5%;
-            width: 200px;
+            width: 250px;
             margin-bottom: 15px;
             margin-top: 25px;
+            box-shadow: 2px 2px 5px;
 
 
         }
@@ -166,14 +170,41 @@
 
         .mibiblioteca {
             display: flex;
+            flex-wrap: wrap;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
+            ;
             padding: 10px;
             padding-top: 30px;
             /* margin: 5px; */
             background-color: #ffffff;
+            color: #6e5c60;
+            font-size: 20px;
+            width: fit-content;
 
-            width: 100vw;
+        }
+
+        .card {
+            background-color: #fdfcfc;
+            border-radius: 8px;
+            box-shadow: 2px 2px 8px #6e5c60;
+            max-height: 250px;
+            min-width: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 0;
+            overflow: hidden;
+
+        }
+
+        .card img{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 130px;
         }
 
 
@@ -183,43 +214,40 @@
             flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
-
             gap: 30px;
             height: 300px;
             margin: 20px;
             padding: 10px;
+            flex-grow: 1;
+
+        }
 
 
-
+        .acciones {
+            margin-top: 20px;
+            
+            text-align: center;
 
         }
 
         .caja-acciones {
 
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-around;
             align-items: center;
-            color: #f0f0f0;
-            background-color: #ffffff;
-            height: 100px;
+            /* background-color:; */
+            width: fit-content +2px;
             border-radius: 5px;
-            gap: 10px;
-            margin: 0px;
+            gap: 15px;
+            margin-top: 15px;
+            font-size: 17px;
+            flex-grow: 1;
 
         }
 
 
-        .card {
-            background-color: #e5e5e5ad;
-            width: 200px;
-            height: 100px;
-            border-radius: 10px;
-            box-shadow: 2px 2px 5px;
 
-
-
-        }
 
         .cardaction {
             display: flex;
@@ -227,11 +255,19 @@
             justify-content: center;
             align-items: center;
             color: #f0f0f0;
-            background-color: #6e5c60;
-            width: 100px;
-            height: 30px;
+            background-color: #0f0f0f;
+            width: 170px;
+            height: 40px;
             border-radius: 5px;
+            box-shadow: 2px 2px 5px #6e5c60;
+            text-decoration: none;
 
+
+        }
+
+        .cardaction :hover {
+            background-color: #f0f0f0;
+            color: #6e5c60;
         }
 
 
@@ -338,7 +374,7 @@
 
 
 
-            <a href="#" class="login-btn">Cerrar sesión</a>
+            <a href="./book-nest.html" class="login-btn">Cerrar sesión</a>
 
 
         </div>
@@ -348,9 +384,13 @@
 
         <div class="content">
 
+
             <div class="sideusuario">
 
+
                 <h2>¡Bienvenido !</h2>
+
+
 
                 <div class="perfilpic">
                     <img src="./imagenes logo/nest-book-logo-blanco-png-.png" alt="foto perfil usuario">
@@ -365,6 +405,51 @@
                     </ul>
                 </div>
 
+                <div class="acciones">
+
+                    <h3>¿Qué necesitas?</h3>
+
+
+
+                    <div class="caja-acciones">
+
+
+                        <div class="cardaction">
+
+                            <a href="#" class="cardaction">Subir libro</a>
+
+
+                        </div>
+
+                        <div class="cardaction">
+
+                            <a href="#" class="cardaction">Alquilar libro</a>
+
+
+
+
+                        </div>
+
+                        <div class="cardaction">
+
+                            <a href="./historialdelibrosperfil.html" class="cardaction">Ver historial</a>
+
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+
+
+                </div>
+
+
 
             </div>
 
@@ -375,78 +460,56 @@
                 <div class="cajalibros">
 
 
-                    <div class="card"> Terapia para llevar
+                    <div class="card"> 
+
+                        <a href="./libro2.html"> <img src="./img books/519ZEip6VPL.webp" alt=""></a>
+
+
+                    </div>
+                    
+
+                   
+
+                    <div class="card">  
+
+                        <a href="./libro1.html"> <img src="./img books/3868817.webp" alt=""></a>
+
 
 
                     </div>
 
-                    <div class="card"> Los Pilares de la Tierra
+                    <div class="card"> 
+
+                        <a href="#"> <img src="./img books/got-fireandbood1.jpg" alt=""></a>
+
+                    </div>
+
+                    <div class="card"> 
+
+                        <a href="#"> <img src="./img books/terapia para llevar.jpg" alt=""></a>
+
 
 
                     </div>
 
-                    <div class="card"> Ladrones en París
+                    <div class="card"> 
+
+                        <a href="#"> <img src="./img books/81ln0VB5r1L._AC_UY436_FMwebp_QL65_.webp" alt=""></a>
+
 
 
                     </div>
 
-                    <div class="card"> Juego de Tronos
+                    <div class="card">
+                        
+                        <a href="#"> <img src="./img books/817eg2N66wL._SY522_.jpg" alt=""></a>
+
 
 
                     </div>
-
-                    <div class="card"> Terapia para llevar
-
-
-                    </div>
-
-                    <div class="card"> Los Pilares de la Tierra
-
-
-                    </div>
-
-
-
-
 
 
                 </div>
-
-                <h3>Seleccione una acción </h3>
-
-                <div class="acciones">
-
-
-
-                    <div class="caja-acciones">
-
-
-                        <div class="cardaction"> 
-
-                            <a href="#" class="cardaction">Subir libro</a>
-
-
-                        </div>
-
-                        <div class="cardaction"> 
-
-                            <a href="#" class="cardaction">Alquilar</a>
-
-
-
-
-                        </div>
-
-
-
-
-
-                    </div>
-
-
-
-                </div>
-
 
 
             </div>
@@ -454,7 +517,10 @@
 
 
 
+
+
         </div>
+
         <!-- Footer -->
         <div class="footer">
             <p>Biblioteca Virtual &copy; 2025 - Todos los derechos reservados.
