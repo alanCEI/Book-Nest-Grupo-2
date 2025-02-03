@@ -157,6 +157,46 @@
 
 
         }
+        /* Sección Top 10 Libros */
+.top-books {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.book-card {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.book-card img {
+    width: auto;
+    max-height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.book-info h3 {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.category {
+    font-size: 14px;
+    color: #777;
+    margin: 5px 0;
+}
+
+.rating {
+    font-size: 18px;
+    color: #f39c12;
+}
         /* CSS terminos y condiciones*/
         .element {
             display: flex;
