@@ -186,11 +186,14 @@
     .reviews, .borrowers {
         grid-column: span 2;
         margin-top: 10px;
+        
     }
     .borrowers {
         background-color: #f0f0f0;
         padding: 10px;
         border-radius: 5px;
+       text-decoration: underline;
+    
     }
     
     /* Botones de Acción */
@@ -221,15 +224,8 @@
         padding: 10px;
     }
     
-    /* Responsividad */
-    @media (max-width: 768px) {
-        .book-container {
-            grid-template-columns: 1fr;
-        }
-        .book-image {
-            grid-row: auto;
-        }
-    }
+    
+    
 </style> 
 </head>
 <body>
@@ -297,12 +293,15 @@
                         <p>📝 Manuel Hernández: "No son pocas las novelas que han triunfado y que han sido llevadas a la pantalla en forma de película o de serie. Sin embargo, no son tantas las adaptaciones que han superado a la novela. La Niebla se incluye en ese selecto club. Y eso que la novela es original, está muy bien escrita y te mantiene en vilo hasta el último renglón. Todo un éxito del rey del suspense."</p>
                         <p>📝 Eva Molina: "Este relato es un clasico del genero de terror, la premisa simple e inquietante va aumentando paulatinamente hasta un terror absoluto, me agrada ver como reaccionan las personas a esta situacion limite y como sacan lo peor o lo mejor de ellos, la adapatación cinematografica es muy buena y su final creo, supera al relato de King. de mis favoritos de este autor."</p>
                     </div>
-                    <div class="borrowers">
+                
+                        
                         <h3>Personas que han alquilado este libro</h3>
+                
+                       <div class="borrowers">
                         <ul>
-                            <li>📚 Pablo Lopéz</li>
-                            <li>📚 Adrián Rodriguez</li>
-                            <li>📚 Marcos Vallejo</li>
+                            <li><strong>📚 Pablo Lopéz</strong></li>
+                            <li><strong>📚 Adrián Rodriguez</strong></li>
+                            <li><strong>📚 Marcos Vallejo</strong></li>
                         </ul>
                     </div>
                 </div>
