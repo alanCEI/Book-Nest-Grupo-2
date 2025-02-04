@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio de Sesión</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background-color: #6e5c60;
+            color: #fff;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-height: 150px;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+        }
+
+        .logo img {
+            display: flex;
+            height: 50px;
+        }
+
+        .login-btn {
+            background-color: #f0f0f0;
+            color: #6e5c60;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            background-color: #333;
+            color: #ffffff;
+        }
+
+        /* Formulario de Login */
+        .login-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        .login-box {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .login-box h2 {
+            margin-bottom: 20px;
+            color: #6e5c60;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-box button {
+            background-color: #6e5c60;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        .login-box button:hover {
+            background-color: #333;
+        }
+
+        /* Estilo del enlace para registro */
+        .login-box .register-link {
+            margin-top: 15px;
+            display: block;
+            color: #6e5c60;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .login-box .register-link:hover {
+            text-decoration: underline;
+            color: #333;
+        }
+
+        .footer {
+            background-color: #6e5d60;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 15px;
+        }
+
+        .footer a {
+            color: #f0f0f0;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <img src="/book-Nest/imagenes_logo/nest _logo_.svg" alt="Logo">
+            </div>
+            <a href="#" class="login-btn">Iniciar Sesión</a>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Iniciar Sesión</h2>
+                <form action="/login" method="POST">
+                    <input type="text" name="username" placeholder="Nombre de Usuario" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit">Entrar</button>
+                </form>
+                <!-- Enlace para registro -->
+                <a href="./registro.html" class="register-link">¿No tienes una cuenta? Regístrate</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>
+                <a href="book-nest.html">Biblioteca Virtual</a> &copy; 2025 - Todos los derechos reservados.
+                <a href="/book-Nest/terminosycondiciones.html">Términos y Condiciones</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

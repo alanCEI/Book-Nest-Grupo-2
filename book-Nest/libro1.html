@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,14 +13,14 @@
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
-        
+
         /* Contenedor Principal */
         .container {
             display: flex;
             flex-direction: column;
             height: 100vh;
         }
-        
+
         /* Header */
         .header {
             background-color: #6e5c60;
@@ -30,26 +31,29 @@
             align-items: center;
             max-height: 150px;
         }
+
         .logo {
-                width: 150px;
-                /* O el tamaño que quieras para el contenedor del logo */
-                height: auto;
-                /* O un valor fijo si deseas limitar la altura */
-            }
-            .logo img {
-                display: flex;
-                flex-direction: row;
-                height: 50px;
-                margin: 1px;
-                margin-left: 0px;
-            }
-    
-    
-        
+            width: 150px;
+            /* O el tamaño que quieras para el contenedor del logo */
+            height: auto;
+            /* O un valor fijo si deseas limitar la altura */
+        }
+
+        .logo img {
+            display: flex;
+            flex-direction: row;
+            height: 50px;
+            margin: 1px;
+            margin-left: 0px;
+        }
+
+
+
         .search-container {
             display: flex;
             align-items: center;
         }
+
         .search-container input {
             padding: 8px;
             font-size: 16px;
@@ -57,6 +61,7 @@
             border-radius: 5px;
             width: 150px;
         }
+
         .search-container button {
             background-color: #252525;
             color: white;
@@ -67,73 +72,77 @@
             border-radius: 5px;
             cursor: pointer;
         }
-    
-    
-    .login-btn {
-                background-color: #f0f0f0;
-                color: #6e5c60;
-                padding: 10px 15px;
-                border: none;
-                border-radius: 5px;
-                border-color: #f0f0f0;
-                cursor: pointer;
-                text-decoration: none;
-            }
-    
-            .login-btn:hover {
-                background-color: #333;
-                color: #ffffff;
-            }
-    
-        
+
+
+        .login-btn {
+            background-color: #f0f0f0;
+            color: #6e5c60;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            border-color: #f0f0f0;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            background-color: #333;
+            color: #ffffff;
+        }
+
+
         /* Main Layout */
         .main {
             display: flex;
             flex: 1;
         }
-         /* Sidebar (géneros literarios) */
-         .sidebar {
-                background-color: #f0f0f0;
-                display: flex;
-                flex-direction:column;
-                width: 100px;
-                height: 100vh;
-                padding: 10px;
-            }
-            
-           
-            .sidebar ul {
-                list-style: none;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                
-            }
-            .sidebar ul li {
-                margin: 8px 0;
-                
-                
-            }
-            .sidebar a {
-                text-decoration: none;
-                color: #1e1e1e;
-                font-size: 12px;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .sidebar a:hover {
-                color: #6e5d60;
-            }
-        
-       
-        
+
+        /* Sidebar (géneros literarios) */
+        .sidebar {
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            width: 100px;
+            height: 100vh;
+            padding: 10px;
+        }
+
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+        }
+
+        .sidebar ul li {
+            margin: 8px 0;
+
+
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: #1e1e1e;
+            font-size: 12px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sidebar a:hover {
+            color: #6e5d60;
+        }
+
+
+
         /* Contenido Principal */
         .content {
             flex: 1;
             padding: 20px;
         }
-        
+
         /* Diseño del libro con Grid */
         .book-container {
             display: grid;
@@ -147,24 +156,26 @@
             max-width: 800px;
             margin: auto;
         }
-        
+
         /* Imagen del libro */
         .book-image {
             grid-row: span 3;
             text-align: center;
         }
+
         .book-image img {
             width: 100%;
             max-width: 200px;
             border-radius: 10px;
         }
-        
+
         /* Información del libro */
         .book-title {
             font-size: 24px;
             font-weight: bold;
             color: #333;
         }
+
         .book-category {
             font-size: 16px;
             color: #777;
@@ -173,27 +184,36 @@
             border-radius: 5px;
             display: inline-block;
         }
+
         .book-rating {
             color: #f39c12;
             font-size: 18px;
         }
+
         .book-synopsis {
             font-size: 14px;
             color: #555;
         }
-        
+
         /* Reseñas y Personas que alquilaron */
-        .reviews, .borrowers {
+        .reviews,
+        .borrowers {
             grid-column: span 2;
             margin-top: 10px;
         }
+
         .borrowers {
             background-color: #f0f0f0;
             padding: 10px;
             border-radius: 5px;
+
+        }
+
+        .borrowers ul {
+            list-style: none;
             text-decoration: underline;
         }
-        
+
         /* Botones de Acción */
         .buttons-container {
             display: flex;
@@ -201,6 +221,7 @@
             gap: 20px;
             margin-top: 20px;
         }
+
         .action-btn {
             background-color: #6e5d60;
             color: white;
@@ -210,21 +231,30 @@
             cursor: pointer;
             font-size: 16px;
         }
+
         .action-btn:hover {
             background-color: #333;
         }
-        
+
         /* Footer */
         .footer {
             background-color: #6e5d60;
             color: #fff;
             text-align: center;
             padding: 10px;
+            font-size: 15px;
         }
-        
-        
-    </style> 
+        .footer a {
+            color: #f0f0f0;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+
 <body>
 
     <div class="container">
@@ -232,16 +262,16 @@
         <div class="header">
             <div class="logo">
 
-                <img src="./imagenes logo/nest-book-logo-blanco-png-.png" alt="Logo">
+                <img src="./imagenes_logo/nest_logo_.svg" alt="Logo">
 
-                </div>
-            
-            
+            </div>
+
+
             <div class="search-container">
                 <input type="text" placeholder="Buscar libro...">
                 <button class="search-btn">Buscar</button>
             </div>
-            <a href="#" class="login-btn">Iniciar Sesión</a>
+            <a href="/login1.html" class="login-btn">Iniciar Sesión</a>
         </div>
 
         <!-- Main Content -->
@@ -279,7 +309,8 @@
             <div class="content">
                 <div class="book-container">
                     <div class="book-image">
-                        <img src="https://imgs.search.brave.com/HuWr2oZ0694c5k5CGsoMDsjV1IeYAL73XAwtqBU7PYc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jb3Zl/cnMuZmVlZGJvb2tz/Lm5ldC9pdGVtLzM4/Njg4MTcuanBnP3Np/emU9bGFyZ2UmdD0x/Njc1MTIzMjMy" alt="Requiem por un campesino español">
+                        <img src="https://imgs.search.brave.com/HuWr2oZ0694c5k5CGsoMDsjV1IeYAL73XAwtqBU7PYc/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jb3Zl/cnMuZmVlZGJvb2tz/Lm5ldC9pdGVtLzM4/Njg4MTcuanBnP3Np/emU9bGFyZ2UmdD0x/Njc1MTIzMjMy"
+                            alt="Requiem por un campesino español">
                     </div>
                     <div class="book-info">
                         <div class="book-title">Réquiem por un campesino español</div>
@@ -287,13 +318,27 @@
 
                         <div class="book-rating">⭐ 4.5/5</div>
                         <div class="book-synopsis">
-                            Réquiem por un campesino español recoge un dramático episodio de la guerra civil en un pueblecito aragonés. Mosén Millán se dispone a ofrecer una misa en sufragio del alma de un joven a quien había querido como a un hijo. Mientras aguarda a los asistentes, el cura reconstruye los hechos: el fracaso de su mediación, con la que creyó poder salvar al joven, pero que sólo sirvió para entregarlo a sus ejecutores. El relato es de una perfecta sobriedad y de una sencillez no por ello menos profunda y estremecedora. La narración sobrecoge por su ajustado realismo, por la eficacia de sus símbolos y por el profundo conocimiento de los mecanismos de la conciencia, puesto de manifiesto a través de la evocación del sacerdote. Sin duda, Réquiem por un campesino español es una de las mejores obras de Ramón J. Sender y un libro definitivo sobre nuestra guerra civil, alejado de cualquier panfletarismo
+                            Réquiem por un campesino español recoge un dramático episodio de la guerra civil en un
+                            pueblecito aragonés. Mosén Millán se dispone a ofrecer una misa en sufragio del alma de un
+                            joven a quien había querido como a un hijo. Mientras aguarda a los asistentes, el cura
+                            reconstruye los hechos: el fracaso de su mediación, con la que creyó poder salvar al joven,
+                            pero que sólo sirvió para entregarlo a sus ejecutores. El relato es de una perfecta
+                            sobriedad y de una sencillez no por ello menos profunda y estremecedora. La narración
+                            sobrecoge por su ajustado realismo, por la eficacia de sus símbolos y por el profundo
+                            conocimiento de los mecanismos de la conciencia, puesto de manifiesto a través de la
+                            evocación del sacerdote. Sin duda, Réquiem por un campesino español es una de las mejores
+                            obras de Ramón J. Sender y un libro definitivo sobre nuestra guerra civil, alejado de
+                            cualquier panfletarismo
                         </div>
                     </div>
                     <div class="reviews">
                         <h3>Reseñas de Usuarios</h3>
-                        <p>📝 Juan Pérez: "Un libro imprescindible para conocer la realidad cotidiana en la España rural durante la Guerra Civil. El poder de la Iglesia, los señorios, la lucha de clases...Una novela breve, pero no por ello menos descriptiva y contundente."</p>
-                        <p>📝 María López: "Una historia breve y sencilla que, sin embargo, encierra diversas denuncias contra la España de aquel tiempo: la pobreza, la desigualdad, el feudalismo, la aparición del fascismo y, como tema central: la complicidad de la iglesia. Recomendable!"</p>
+                        <p><strong>📝 Juan Pérez:</strong> "Un libro imprescindible para conocer la realidad cotidiana en la España rural
+                            durante la Guerra Civil. El poder de la Iglesia, los señorios, la lucha de clases...Una
+                            novela breve, pero no por ello menos descriptiva y contundente."</p>
+                        <p><strong>📝 María López:</strong> "Una historia breve y sencilla que, sin embargo, encierra diversas denuncias
+                            contra la España de aquel tiempo: la pobreza, la desigualdad, el feudalismo, la aparición
+                            del fascismo y, como tema central: la complicidad de la iglesia. Recomendable!"</p>
                     </div>
                     <div class="borrowers">
                         <h3>Personas que han alquilado este libro</h3>
@@ -309,17 +354,21 @@
                     <button class="action-btn">📤 Subir Libro</button>
                     <button class="action-btn">🔄 Prestar Libro</button>
                     <button class="action-btn">📚 Mis Libros</button>
-  
+
                 </div>
             </div>
         </div>
 
         <!-- Footer -->
         <div class="footer">
-            Tu Empresa &copy; 2025 - Todos los derechos reservados. 
-            <a href="#">Términos y Condiciones</a>
+            <p>
+                <a href="book-nest.html">Biblioteca Virtual</a> &copy; 2025 - Todos los derechos reservados.
+                <a href="terminosycondiciones.html">Términos y Condiciones</a>
+            </p>
         </div>
+
     </div>
 
 </body>
+
 </html>
