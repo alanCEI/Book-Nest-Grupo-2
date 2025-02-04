@@ -32,7 +32,6 @@
             align-items: center;
             max-height: 150px;
         }
-
         .logo {
             width: 150px;
             height: auto;
@@ -45,6 +44,10 @@
             margin: 1px;
             margin-left: 0px;
         }
+       
+
+       
+
 
         /* Buscador en el header */
         .search-container {
@@ -73,6 +76,20 @@
 
         .search-container button:hover {
             background-color: #777;
+        }
+        .login-btn {
+            background-color: #f0f0f0;
+            color: #6e5c60;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .login-btn:hover {
+            background-color: #333;
+            color: #ffffff;
         }
 
         /* Formulario de Registro */
@@ -165,15 +182,22 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
+
             <div class="logo">
-                <img src="/book-Nest/imagenes_logo/nest _logo_.svg" alt="Logo">
+
+                <img src="./book-Nest/imagenes_logo/nest _logo_.svg">
+
             </div>
+    
             <div class="search-container">
                 <input type="text" placeholder="Buscar libros...">
-                <button class="search-btn">
-                    <div class="search-icon"></div> Buscar
+                <button class="search-btn"></div>
+            <div class="search-icon"></div> Buscar
                 </button>
-            </div>
+            
+
+            <a href="/login1.html" class="login-btn">Iniciar Sesión</a>
+            
         </div>
 
 

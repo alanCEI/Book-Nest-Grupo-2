@@ -7,26 +7,26 @@
     <title>Página de Inicio de Sesión</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        * {
+    
+    * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: Arial, Helvetica, sans-serif;
         }
-
-        /* Contenedor Principal */
+        /* Contenedor Layout General */
         .container {
             display: flex;
             flex-direction: column;
             height: 100vh;
         }
-
-        /* Header */
+        /* Estilos para el header */
         .header {
             background-color: #6e5c60;
             color: #fff;
             padding: 15px;
             display: flex;
+            flex-direction: row;
             justify-content: space-between;
             align-items: center;
             max-height: 150px;
@@ -34,29 +34,59 @@
 
         .logo {
             width: 150px;
+            /* O el tamaño que quieras para el contenedor del logo */
             height: auto;
+            /* O un valor fijo si deseas limitar la altura */
         }
-
         .logo img {
             display: flex;
+            flex-direction: row;
             height: 50px;
+            margin: 1px;
+            margin-left: 0px;
         }
-
+        
+        /* Buscador en el header */
+        .search-container {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input {
+            padding: 8px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+        }
+        .search-container button {
+            background-color: #252525;
+            color: white;
+            border: none;
+            padding: 7px 10px;
+            margin-left: 5px;
+            border-color: #f0f0f0;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #777;
+        }
+        /* Botón de inicio de sesión */
         .login-btn {
             background-color: #f0f0f0;
             color: #6e5c60;
             padding: 10px 15px;
             border: none;
             border-radius: 5px;
+            border-color: #f0f0f0;
             cursor: pointer;
             text-decoration: none;
         }
-
         .login-btn:hover {
             background-color: #333;
             color: #ffffff;
         }
-
+       
         /* Formulario de Login */
         .login-container {
             display: flex;
@@ -146,9 +176,15 @@
             <div class="logo">
                 <img src="/book-Nest/imagenes_logo/nest _logo_.svg" alt="Logo">
             </div>
-            <a href="#" class="login-btn">Iniciar Sesión</a>
-        </div>
+            <div class="search-container">
+                <input type="text" placeholder="Buscar libros...">
+                <button class="search-btn">
+            <div class="search-icon"></div> Buscar
+                </button>
+            </div>
 
+            <a href="/login1.html" class="login-btn">Iniciar Sesión</a>
+            </div>
         <!-- Contenido Principal -->
         <div class="login-container">
             <div class="login-box">
